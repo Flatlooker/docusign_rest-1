@@ -785,6 +785,9 @@ module DocusignRest
         status: "#{options[:status]}",
         customFields: options[:custom_fields]
       }
+      puts "-----------------DEBUGGING--------------"
+      puts post_hash[:emailSettings]
+      puts "-----------------DEBUGGING--------------"
       post_hash[:enableWetSign] = options[:wet_sign] if options.has_key? :wet_sign
       post_body = post_hash.to_json
 
